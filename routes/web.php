@@ -10,8 +10,7 @@ Route::middleware(['auth', 'verified'])->group(function () {
     // tasks
     Route::livewire('/tasks', 'pages::tasks.index')->name('tasks.index');
     Route::livewire('/tasks/create', 'pages::tasks.create')->name('tasks.create');
-    Route::livewire('/tasks/update', 'pages::tasks.update')->name('tasks.update');
-    Route::livewire('/tasks/delete', 'pages::tasks.delete')->name('tasks.delete');
+    Route::livewire('/tasks/{task}/update', 'pages::tasks.update')->name('tasks.update');
 });
 
 require __DIR__.'/settings.php';
