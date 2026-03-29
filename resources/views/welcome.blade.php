@@ -23,9 +23,9 @@
         @if (Route::has('login'))
             <nav class="flex items-center justify-end gap-4">
                 @auth
-                    <a href="{{ route('dashboard') }}"
+                    <a href="{{ route('tasks.index') }}"
                         class="inline-block px-5 py-1.5 dark:text-[#EDEDEC] border-[#19140035] hover:border-[#1915014a] border text-[#1b1b18] dark:border-[#3E3E3A] dark:hover:border-[#62605b] rounded-sm text-sm leading-normal">
-                        Dashboard
+                        Tasks
                     </a>
                 @else
                     <a href="{{ route('login') }}"
@@ -43,21 +43,22 @@
             </nav>
         @endif
     </header>
-    <div class="flex grow items-center justify-center w-full transition-opacity opacity-100 duration-750 bg-white dark:bg-slate-950 px-6">
+    <div
+        class="flex grow items-center justify-center w-full transition-opacity opacity-100 duration-750 bg-white dark:bg-slate-950 px-6">
         <main class="flex max-w-4xl w-full flex-col items-center text-center">
 
-            <h1 class="mb-4 text-sm font-bold tracking-widest uppercase text-indigo-500 dark:text-indigo-400">
+            <h1
+                class="mb-2 text-4xl font-black tracking-tighter uppercase text-indigo-600 dark:text-indigo-500 sm:text-7xl">
                 Wiretask
             </h1>
 
-            <h2 class="text-4xl font-extrabold tracking-tight text-slate-900 dark:text-white sm:text-6xl">
-                Organize your work <br />
-                <span class="text-indigo-600 dark:text-indigo-500">without the chaos.</span>
+            <h2 class="text-2xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
+                Organize your work <span class="text-indigo-500 dark:text-indigo-400">all in one place.</span>
             </h2>
 
-            <p class="mt-6 text-lg leading-8 text-slate-600 dark:text-slate-400 max-w-2xl">
-                A simple, powerful task manager designed to help you focus on what
-                matters. Create tasks, set priorities, and track your progress all in one place.
+            <p class="mt-4 text-lg leading-8 text-slate-600 dark:text-slate-300 max-w-2xl">
+                A simple task manager built with <span class="font-bold">Laravel 13</span> and <span class="font-bold">Livewire 4</span>.
+                Create tasks, set priorities, and track your progress.
             </p>
 
         </main>
